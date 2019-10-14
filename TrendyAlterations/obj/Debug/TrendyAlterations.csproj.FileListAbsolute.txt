@@ -108,7 +108,6 @@ C:\Users\Kehli Cousins\Source\Repos\KCEnterprise\TrendyAlterations\TrendyAlterat
 C:\Users\Kehli Cousins\Source\Repos\KCEnterprise\TrendyAlterations\TrendyAlterations\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
 C:\Users\Kehli Cousins\Source\Repos\KCEnterprise\TrendyAlterations\TrendyAlterations\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
 C:\Users\Kehli Cousins\Source\Repos\KCEnterprise\TrendyAlterations\TrendyAlterations\obj\Debug\TrendyAlterations.csprojAssemblyReference.cache
-C:\Users\Kehli Cousins\Source\Repos\KCEnterprise\TrendyAlterations\TrendyAlterations\obj\Debug\TrendyAlterations.csproj.CoreCompileInputs.cache
 C:\Users\Kehli Cousins\Source\Repos\KCEnterprise\TrendyAlterations\TrendyAlterations\obj\Debug\TrendyAlterations.csproj.CopyComplete
 C:\Users\Kehli Cousins\Source\Repos\KCEnterprise\TrendyAlterations\TrendyAlterations\obj\Debug\TrendyAlterations.dll
 C:\Users\Kehli Cousins\Source\Repos\KCEnterprise\TrendyAlterations\TrendyAlterations\obj\Debug\TrendyAlterations.pdb

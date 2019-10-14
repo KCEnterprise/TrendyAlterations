@@ -17,10 +17,10 @@
             height: 50px;
             width: 821px;
             position: absolute;
-            top: 710px;
-            left: 703px;
+            top: 584px;
+            left: 571px;
             margin-top: 2px;
-            bottom: 2px;
+            bottom: 13px;
         }
     </style>
 </head>
