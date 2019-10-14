@@ -141,7 +141,7 @@
                         <asp:Label ID="labPhoneNumber" runat="server" Text="Phone Number"></asp:Label>
                     </td>
                     <td class="auto-style1">
-                        <asp:TextBox ID="txtPhoneNumber" runat="server" Height="54px" Width="367px" ></asp:TextBox>
+                        <asp:TextBox ID="txtPhoneNumber" runat="server" Height="54px" placeholder="### - ### - ####" Width="367px" ></asp:TextBox>
                         <asp:RegularExpressionValidator ID="RegularExpressionValidator1" runat="server" ControlToValidate="txtPhoneNumber" ErrorMessage="Must be in the form ###-###-####" Font-Bold="True" Font-Size="Small" ForeColor="Red" ValidationExpression="((\(\d{3}\) ?)|(\d{3}-))?\d{3}-\d{4}" Display="None"></asp:RegularExpressionValidator>
                      </td>
                     
