@@ -135,7 +135,6 @@
     <Content Include="images\pic04.jpg" />
     <Content Include="images\suitAlteration.jpg" />
     <Content Include="images\TrendyAlterationsLogo.png" />
-    <Content Include="New Webform.aspx" />
     <Content Include="Packages.aspx" />
     <Content Include="registration.aspx" />
     <Content Include="Scripts\jquery-ui-1.12.1.js" />
@@ -164,13 +163,6 @@
     </Compile>
     <Compile Include="homepage.aspx.designer.cs">
       <DependentUpon>homepage.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="New Webform.aspx.cs">
-      <DependentUpon>New Webform.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="New Webform.aspx.designer.cs">
-      <DependentUpon>New Webform.aspx</DependentUpon>
     </Compile>
     <Compile Include="Packages.aspx.cs">
       <DependentUpon>Packages.aspx</DependentUpon>
