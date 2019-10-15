@@ -30,7 +30,7 @@
 			<header id="header" class="alt">
                 <div class="logo">
 
-                    <asp:HyperLink ID="hprlogo" runat="server" NavigateUrl="~/homepage.aspx"> <asp:Image ID="Image1" runat="server" href="homepage.aspx"  ImageURL="~/Images/TrendyAlterationsLogo.png" CssClass="auto-style1" Height="208px" Width="225px" /> </asp:HyperLink>
+                    <asp:HyperLink ID="hprlogo" runat="server" NavigateUrl="~/homepage.aspx"> <asp:Image ID="Image1" runat="server" href="homepage.aspx"  ImageURL="~/images/TrendyAlterationsLogo.png" CssClass="auto-style1" Height="208px" Width="225px" /> </asp:HyperLink>
                    
 
                 </div>
@@ -63,11 +63,12 @@
 		<!-- Wrapper -->
 			<div id="wrapper">
 
-				<!-- Banner -->
+				<section>
 
-				<!-- Items -->
+				</section>
+                <section>
 
-				<!-- CTA -->
+                </section>
 
 				<!-- Footer -->
 					<footer id="footer">
