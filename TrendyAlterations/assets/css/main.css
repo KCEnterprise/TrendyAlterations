@@ -1452,7 +1452,6 @@
 .productlist {
     margin-right: 100px;
     margin-top: 100px;
-    width: 846px;
     padding-left:100px;
     float:left;
 }
@@ -1461,6 +1460,11 @@
     height:23px;
     font-size:smaller;
    }
+
+.shoppingcart {
+    margin-left: 1062px;
+    float:right;
+}
 
 
     
