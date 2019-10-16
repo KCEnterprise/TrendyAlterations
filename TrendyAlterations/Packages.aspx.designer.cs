@@ -7,11 +7,13 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace TrendyAlterations {
-    
-    
-    public partial class Products {
-        
+namespace TrendyAlterations
+{
+
+
+    public partial class Products
+    {
+
         /// <summary>
         /// form1 control.
         /// </summary>
@@ -20,7 +22,7 @@ namespace TrendyAlterations {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.HtmlControls.HtmlForm form1;
-        
+
         /// <summary>
         /// Image1 control.
         /// </summary>
@@ -29,203 +31,167 @@ namespace TrendyAlterations {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Image Image1;
-        
+
         /// <summary>
-        /// HyplHome control.
+        /// Image2 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.HyperLink HyplHome;
-        
+        protected global::System.Web.UI.WebControls.Image Image2;
+
         /// <summary>
-        /// HyplAbout control.
+        /// Label1 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.HyperLink HyplAbout;
-        
+        protected global::System.Web.UI.WebControls.Label Label1;
+
         /// <summary>
-        /// HyplPackages control.
+        /// Label2 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.HyperLink HyplPackages;
-        
+        protected global::System.Web.UI.WebControls.Label Label2;
+
         /// <summary>
-        /// HyplContact control.
+        /// Label3 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.HyperLink HyplContact;
-        
+        protected global::System.Web.UI.WebControls.Label Label3;
+
         /// <summary>
-        /// imgFsleeve control.
+        /// Label4 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Image imgFsleeve;
-        
+        protected global::System.Web.UI.WebControls.Label Label4;
+
         /// <summary>
-        /// lblFSleeveID control.
+        /// Label5 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblFSleeveID;
-        
+        protected global::System.Web.UI.WebControls.Label Label5;
+
         /// <summary>
-        /// lblFSleeveName control.
+        /// Image3 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblFSleeveName;
-        
+        protected global::System.Web.UI.WebControls.Image Image3;
+
         /// <summary>
-        /// lblFSleevePrice control.
+        /// Label6 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblFSleevePrice;
-        
+        protected global::System.Web.UI.WebControls.Label Label6;
+
         /// <summary>
-        /// lblFSleeveCategory control.
+        /// Label7 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblFSleeveCategory;
-        
+        protected global::System.Web.UI.WebControls.Label Label7;
+
         /// <summary>
-        /// lblFSleeveDesc control.
+        /// Label8 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblFSleeveDesc;
-        
+        protected global::System.Web.UI.WebControls.Label Label8;
+
         /// <summary>
-        /// ImgFhemming control.
+        /// Label9 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Image ImgFhemming;
-        
+        protected global::System.Web.UI.WebControls.Label Label9;
+
         /// <summary>
-        /// lblFHemID control.
+        /// Label10 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblFHemID;
-        
+        protected global::System.Web.UI.WebControls.Label Label10;
+
         /// <summary>
-        /// lblFHemProdName control.
+        /// Image4 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblFHemProdName;
-        
+        protected global::System.Web.UI.WebControls.Image Image4;
+
         /// <summary>
-        /// lblFHemPrice control.
+        /// Label11 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblFHemPrice;
-        
+        protected global::System.Web.UI.WebControls.Label Label11;
+
         /// <summary>
-        /// lblFHemCategory control.
+        /// Label12 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblFHemCategory;
-        
+        protected global::System.Web.UI.WebControls.Label Label12;
+
         /// <summary>
-        /// lblFHemDesc control.
+        /// Label13 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblFHemDesc;
-        
+        protected global::System.Web.UI.WebControls.Label Label13;
+
         /// <summary>
-        /// ImgFtakein control.
+        /// Label14 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Image ImgFtakein;
-        
+        protected global::System.Web.UI.WebControls.Label Label14;
+
         /// <summary>
-        /// lblFtakeinID control.
+        /// Label15 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblFtakeinID;
-        
-        /// <summary>
-        /// lblFtakeinName control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblFtakeinName;
-        
-        /// <summary>
-        /// lblFTakeinPrice control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblFTakeinPrice;
-        
-        /// <summary>
-        /// lblFTakeinCategory control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblFTakeinCategory;
-        
-        /// <summary>
-        /// lblFTakeinDesc control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblFTakeinDesc;
+        protected global::System.Web.UI.WebControls.Label Label15;
     }
 }

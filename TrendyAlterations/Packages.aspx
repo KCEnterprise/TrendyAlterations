@@ -8,19 +8,11 @@
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
 		<link rel="stylesheet" href="assets/css/main.css" />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous" />
         <script src="//code.jquery.com/jquery-1.10.2.js"></script>
         <script src="//code.jquery.com/ui/1.11.3/jquery-ui.js"></script>
     <style type="text/css">
         
-        .auto-style13 {
-            height: 50px;
-            width: 821px;
-            position: absolute;
-            top: 710px;
-            left: 703px;
-            margin-top: 2px;
-            bottom: 2px;
-        }
         .auto-style15 {
             width: 837px;
         }
@@ -30,25 +22,14 @@
        
         .auto-style24 {
             height: 192px;
-            width: 911px;
-        }
-        .auto-style25 {
-            float: right;
-            width: 682px;
-            height: 196px;
+            width: 700px;
         }
        
-        .auto-style26 {
-            height: 660px;
-            width: 592px;
-        }
-               
-        .auto-style27 {
-            margin-top: 100px;
-            float: right;
-            padding-right: 100px;
+       
+        .auto-style28 {
             margin-left: 0px;
         }
+      
                
         </style>
     <script>
@@ -173,48 +154,43 @@
                 
                 </header>
 
-        <div class="auto-style13">
-            <div>
-                    <asp:HyperLink ID="HyplHome" runat="server" NavigateUrl="~/homepage.aspx">Home</asp:HyperLink>
+        <ul class="list-inline d-flex justify-content-center" id="myTab" role="tablist">
+            <li class="nav-item">
+                <a class="nav-link " id="home-tab" data-toggle="tab" href="homepage.aspx" role="tab" aria-controls="home" aria-selected="true">Home</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" id="profile-tab" data-toggle="tab" href="About.aspx" role="tab" aria-controls="profile" aria-selected="false">About</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" id="messages-tab" data-toggle="tab" href="Packages.aspx" role="tab" aria-controls="messages" aria-selected="false">Packages</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" id="settings-tab" data-toggle="tab" href="Contact.aspx" role="tab" aria-controls="settings" aria-selected="false">Contact Us</a>
+            </li>
+        </ul>
 
-                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp; &nbsp;&nbsp;
-                    <asp:HyperLink ID="HyplAbout" runat="server" NavigateUrl="~/About.aspx">About</asp:HyperLink>
-
-                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;
-                    <asp:HyperLink ID="HyplPackages" runat="server" NavigateUrl="~/Packages.aspx">Packages</asp:HyperLink>
-
-                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;
-                    <asp:HyperLink ID="HyplContact" runat="server" NavigateUrl="~/Contact.aspx">Contact</asp:HyperLink>
-
-                    <br />
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-
-                </div>            
-        </div>
-
-        <!-- Wrapper -->
-			
-				<!-- Banner -->
-				<div id="productsleft" class="productlist">
-						<h2 class="auto-style15">Formal Alterations</h2>
+      <div class="row mx-md-px-n5 pt-5">
+          <div class="col px-5">
+              <div class="p-3  bg-light">
+                  <h2 style="text-align: center;">Formal Alterations</h2>
                         <ul class="product" id:"formalproducts" style="list-style-type: none" >
                                 <li class="auto-style24">
                                         <div style="float:left">
-                                            <asp:Image ID="imgFsleeve"  runat="server"  CssClass="shop-item-image" ImageURL="~/Images/Fsleeve.jpg"   Height="196px" Width="205px"  />
+                                            <asp:Image ID="Image2"  runat="server"  CssClass="shop-item-image" ImageURL="~/Images/Fsleeve.jpg"   Height="196px" Width="205px"  />
                                           </div>
                                         <div class="auto-style25" style="font-family: 'times New Roman', Times, serif; font-size: large;">
-                                                <asp:Label ID="lblFSleeveID"  runat="server" Text="F_SleeveAlt" ForeColor="#9966FF" Font-Bold="True"></asp:Label>&nbsp;&nbsp;||&nbsp;&nbsp;
-                                                <asp:Label ID="lblFSleeveName" runat="server" Class="shop-item-title"  ForeColor="#9966FF" Text="Sleeve Adjustment" Font-Bold="True"></asp:Label>
+                                                <asp:Label ID="Label1"  runat="server" Text="F_SleeveAlt" ForeColor="#9966FF" Font-Bold="True"></asp:Label>&nbsp;&nbsp;||&nbsp;&nbsp;
+                                                <asp:Label ID="Label2" runat="server" Class="shop-item-title"  ForeColor="#9966FF" Text="Sleeve Adjustment" Font-Bold="True"></asp:Label>
                                                   <br />
-                                                <asp:Label ID="lblFSleevePrice" runat="server" Class="shop-item-price" Text="Label">$4000</asp:Label>
+                                                <asp:Label ID="Label3" runat="server" Class="shop-item-price" Text="Label">$4000</asp:Label>
                                                   &nbsp;&nbsp;
                                                   <br />
-                                                <asp:Label ID="lblFSleeveCategory" runat="server" Text="Formal" Font-Names="Segoe Script"></asp:Label>
+                                                <asp:Label ID="Label4" runat="server" Text="Formal" Font-Names="Segoe Script"></asp:Label>
                                                 &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;
                                                 <button class="btn btn-primary shop-item-button" type="button">ADD TO CART</button>
                                                 <br />
                                                   <br />
-                                                <asp:Label ID="lblFSleeveDesc" runat="server" Text="Label">Description: Sleeve cutting, sleeve take in and sleeve removal </asp:Label>
+                                                <asp:Label ID="Label5" runat="server" Text="Label">Description: Sleeve cutting, sleeve take in and sleeve removal </asp:Label>
                                                   <br />
                                         </div>                                       
                                 </li>
@@ -223,21 +199,21 @@
                                    <br />
                                     <div>
                                         <div style="float:left">
-                                            <asp:Image ID="ImgFhemming" runat="server"  CssClass="shop-item-image" ImageURL="~/Images/F_hemming.jpg"    Height="196px" Width="205px"  />
+                                            <asp:Image ID="Image3" runat="server"  CssClass="shop-item-image" ImageURL="~/Images/F_hemming.jpg"    Height="196px" Width="205px"  />
                                            </div>
                                         <div class="auto-style25" id="FSleeveProduct" style="font-family: 'times New Roman', Times, serif; font-size: large;">
-                                               <asp:Label ID="lblFHemID" CssClass="ID" runat="server" Text="F_Hem" ForeColor="#9966FF" Font-Bold="True"></asp:Label>&nbsp;&nbsp;||&nbsp;&nbsp;
-                                                <asp:Label ID="lblFHemProdName" Class="shop-item-title" runat="server"  ForeColor="#9966FF" Font-Bold="True">Hemming</asp:Label>
+                                               <asp:Label ID="Label6" CssClass="ID" runat="server" Text="F_Hem" ForeColor="#9966FF" Font-Bold="True"></asp:Label>&nbsp;&nbsp;||&nbsp;&nbsp;
+                                                <asp:Label ID="Label7" Class="shop-item-title" runat="server"  ForeColor="#9966FF" Font-Bold="True">Hemming</asp:Label>
                                                   <br />
-                                                <asp:Label ID="lblFHemPrice" Class="shop-item-price" runat="server" Text="Label">$2500</asp:Label>
+                                                <asp:Label ID="Label8" Class="shop-item-price" runat="server" Text="Label">$2500</asp:Label>
                                                   <br />
-                                                <asp:Label ID="lblFHemCategory" runat="server" Text="Formal" Font-Names="Segoe Script"></asp:Label>
+                                                <asp:Label ID="Label9" runat="server" Text="Formal" Font-Names="Segoe Script"></asp:Label>
                                                 &nbsp; &nbsp;&nbsp;&nbsp;
                                                 <button class="btn btn-primary shop-item-button" type="button">ADD TO CART</button>
                                                 &nbsp;&nbsp;
                                                 <br />
                                                   <br />
-                                                <asp:Label ID="lblFHemDesc" runat="server" Text="Label">Description: Hem repairs, hem installation, cut and Hem </asp:Label>
+                                                <asp:Label ID="Label10" runat="server" Text="Label">Description: Hem repairs, hem installation, cut and Hem </asp:Label>
                                                   <br />
                                         </div>
                                     </div>
@@ -246,31 +222,33 @@
                             <li class="auto-style24"  > 
                                 <br /><br />
                                     <div style="float:left">
-                                        <asp:Image ID="ImgFtakein" runat="server" CssClass="shop-item-image" ImageURL="~/Images/Ftakein.jpg"    Height="196px" Width="205px"  />
+                                        <asp:Image ID="Image4" runat="server" CssClass="shop-item-image" ImageURL="~/Images/Ftakein.jpg"    Height="196px" Width="205px"  />
                                       </div>
                                     <div class="auto-style25" style="font-family: 'times New Roman', Times, serif; font-size: large;">
-                                           <asp:Label ID="lblFtakeinID" runat="server" Text="F_Hem" ForeColor="#9966FF" Font-Bold="True"></asp:Label>&nbsp;&nbsp;||&nbsp;&nbsp;
-                                            <asp:Label ID="lblFtakeinName" Class="shop-item-title" runat="server"  ForeColor="#9966FF" Font-Bold="True">Take In</asp:Label>
+                                           <asp:Label ID="Label11" runat="server" Text="F_Hem" ForeColor="#9966FF" Font-Bold="True"></asp:Label>&nbsp;&nbsp;||&nbsp;&nbsp;
+                                            <asp:Label ID="Label12" Class="shop-item-title" runat="server"  ForeColor="#9966FF" Font-Bold="True">Take In</asp:Label>
                                               <br />
-                                            <asp:Label ID="lblFTakeinPrice" Class="shop-item-price" runat="server" Text="Label">$5000</asp:Label>
+                                            <asp:Label ID="Label13" Class="shop-item-price" runat="server" Text="Label">$5000</asp:Label>
                                               <br />
-                                            <asp:Label ID="lblFTakeinCategory" runat="server" Text="Formal" Font-Names="Segoe Script"></asp:Label>
+                                            <asp:Label ID="Label14" runat="server" Text="Formal" Font-Names="Segoe Script"></asp:Label>
                                             &nbsp;&nbsp;&nbsp; &nbsp;
                                                 <button class="btn btn-primary shop-item-button" type="button">ADD TO CART</button>
                                             <br />
                                               <br />
-                                            <asp:Label ID="lblFTakeinDesc" runat="server" Text="Label">Description: Take In Waist, let out waist </asp:Label>
+                                            <asp:Label ID="Label15" runat="server" Text="Label">Description: Take In Waist, let out waist </asp:Label>
                                               <br />
                                     </div>
                         </li>
                         
 					</ul>
 
-				</div>
-                <div class="auto-style27">
+              </div>
+
+          </div>
+          <div class="col px-5">
+              <div class="p-3  bg-light">                 
                     <h2 style="text-align: center;">Shopping Cart</h2>
-                     <div  id= "cart" class="auto-style26" style="border: medium none #FFFFFF; background-color: #C0C0C0">
-                         
+                   
                     <div class="cart-row">
                         <span class="cart-item cart-header cart-column">&nbsp;&nbsp; ITEM</span>
                         <span class="cart-price cart-header cart-column">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; |&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; PRICE</span>
@@ -282,12 +260,11 @@
                         <strong class="cart-total-title">Total:    </strong>&nbsp;&nbsp;&nbsp;
                         <span class="cart-total-price">$0</span>
                     </div>
-                    <button class="btn btn-primary btn-purchase" type="button">PURCHASE</button>                     
-                        </div>
+                    <button class="btn btn-primary btn-purchase" type="button">PURCHASE</button> 
+              </div>
 
-                </div>
-                
-			
+          </div>
+    </div>
     </form>
 </body>
 </html>
