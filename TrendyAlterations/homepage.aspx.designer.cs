@@ -7,11 +7,13 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace TrendyAlterations {
-    
-    
-    public partial class homepage {
-        
+namespace TrendyAlterations
+{
+
+
+    public partial class homepage
+    {
+
         /// <summary>
         /// form1 control.
         /// </summary>
@@ -20,7 +22,7 @@ namespace TrendyAlterations {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.HtmlControls.HtmlForm form1;
-        
+
         /// <summary>
         /// hprlogo control.
         /// </summary>
@@ -29,7 +31,7 @@ namespace TrendyAlterations {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.HyperLink hprlogo;
-        
+
         /// <summary>
         /// Image1 control.
         /// </summary>
@@ -38,7 +40,7 @@ namespace TrendyAlterations {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Image Image1;
-        
+
         /// <summary>
         /// HyplHome control.
         /// </summary>
@@ -47,7 +49,7 @@ namespace TrendyAlterations {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.HyperLink HyplHome;
-        
+
         /// <summary>
         /// HyplAbout control.
         /// </summary>
@@ -56,7 +58,7 @@ namespace TrendyAlterations {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.HyperLink HyplAbout;
-        
+
         /// <summary>
         /// HyplPackages control.
         /// </summary>
@@ -65,7 +67,7 @@ namespace TrendyAlterations {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.HyperLink HyplPackages;
-        
+
         /// <summary>
         /// HyplContact control.
         /// </summary>
