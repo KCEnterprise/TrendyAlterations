@@ -14,15 +14,7 @@
             height: 50px;
         }
 
-        .auto-style13 {
-            height: 50px;
-            width: 821px;
-            position: absolute;
-            top: 584px;
-            left: 571px;
-            margin-top: 2px;
-            bottom: 13px;
-        }
+        
     </style>
 </head>
 <body>
@@ -43,25 +35,6 @@
                 <p class="auto-style3">"SNIPPED TO FIT"</p>
             </div>
         </header>
-        <%--<div class="auto-style13">
-                 <div>
-
-                            <asp:HyperLink ID="HyplHome" runat="server" NavigateUrl="~/homepage.aspx">Home</asp:HyperLink>
-
-                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp; &nbsp;&nbsp;
-                            <asp:HyperLink ID="HyplAbout" runat="server" NavigateUrl="~/About.aspx">About</asp:HyperLink>
-
-                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;
-                            <asp:HyperLink ID="HyplPackages" runat="server" NavigateUrl="~/Packages.aspx">Packages</asp:HyperLink>
-
-                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;
-                            <asp:HyperLink ID="HyplContact" runat="server" NavigateUrl="~/Contact.aspx">Contact Us</asp:HyperLink>
-
-                            <br />
-        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-
-                        </div>
-             </div>--%>
        
             <ul class="list-inline d-flex justify-content-center" id="myTab" role="tablist">
                 <li class="nav-item">
