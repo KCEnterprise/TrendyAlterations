@@ -1,5 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
+using Microsoft.AspNet.Identity;
+using Microsoft.AspNet.Identity.EntityFramework;
 using System.Linq;
 using System.Web;
 using System.Web.UI;
@@ -29,20 +31,16 @@ namespace TrendyAlterations
         {
             Session["FirstName"] = txtFirstName.Text;
             Session["LastName"] = txtLastName.Text;
-            if (IsValid) { 
-            //{
-            Response.Redirect("Welcomepage.aspx");
+            if (IsValid) {
+                var userStore = new UserStore<IdentityUser>();
+                var manager = new UserManager<IdentityUser>(userStore);
+
+                var user = new IdentityUser() { UserName = txtFirstName.Text };
+                IdentityResult result = manager.Create(user, txtPassword.Text);
+                Response.Redirect("Welcomepage.aspx");
             }
 
-
-
-            //Application.Lock();
-            //    //int countMembers = (int)Application["membersCounter"];
-            //    //Application["membersCount"] = countMembers + 1;
-            //    //Application.UnLock();
-            //    //lblMembersCount.Text = countMembers.ToString();
-
-        }
+       }
 
         protected void txtConfirmPassword_TextChanged(object sender, EventArgs e)
         {
