@@ -1,8 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 using Microsoft.AspNet.Identity;
 using Microsoft.AspNet.Identity.EntityFramework;
-using System.Linq;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
@@ -16,28 +16,29 @@ namespace TrendyAlterations
         
         protected void Page_Load(object sender, EventArgs e)
         {
-            if (!IsPostBack)
-            {
-                if (Application["membersCounter"] == null)
-                {
-                    Application["membersCounter"] = 0;
-                }
-                lblMembersCount.Text = Application["membersCounter"].ToString();
-
-            }
-            //lblMembersCount.Text = countMembers.ToString();
+            //if (!IsPostBack)
+            //{
+            //    if (Application["membersCounter"] == null)
+            //    {
+            //        Application["membersCounter"] = 0;
+            //    }
+            //    lblMembersCount.Text = Application["membersCounter"].ToString();
+            //}
         }
-        protected void btnRegister_Click2(object sender, EventArgs e)
+        protected void CreateUser(object sender, EventArgs e)
         {
-            Session["FirstName"] = txtFirstName.Text;
-            Session["LastName"] = txtLastName.Text;
-            if (IsValid) {
-                var userStore = new UserStore<IdentityUser>();
-                var manager = new UserManager<IdentityUser>(userStore);
+            var userStore = new UserStore<IdentityUser>();
+            var manager = new UserManager<IdentityUser>(userStore);
 
-                var user = new IdentityUser() { UserName = txtFirstName.Text };
-                IdentityResult result = manager.Create(user, txtPassword.Text);
-                Response.Redirect("Welcomepage.aspx");
+            var user = new IdentityUser() { UserName = txtFirstName.Text };
+            IdentityResult result = manager.Create(user, txtPassword.Text);
+            if (result.Succeeded)
+                {
+                if (IsValid) {
+                    Session["FirstName"] = txtFirstName.Text;
+                    Session["LastName"] = txtLastName.Text;
+                    Response.Redirect("Welcomepage.aspx");
+                }
             }
 
        }
@@ -64,7 +65,5 @@ namespace TrendyAlterations
         {
 
         }
-
-    
     }
 }   

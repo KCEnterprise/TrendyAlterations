@@ -40,16 +40,6 @@
             height: 45px;
         }
 
-        .auto-style13 {
-            height: 50px;
-            width: 821px;
-            position: absolute;
-            top: 734px;
-            left: 700px;
-            margin-top: 2px;
-            bottom: 154px;
-        }
-
         .auto-style16 {
             height: 1000px;
             width: 95%;
@@ -59,18 +49,9 @@
             height: 721px;
         }
 
-        .auto-style19 {
-            height: 50px;
-            width: 306px;
-            position: absolute;
-            top: 230px;
-            left: 134px;
-            margin-top: 0px;
-            bottom: -230px;
-        }
-
-        .auto-style20 {
-            margin-bottom: 0px;
+        .auto-style18 {
+            width: 101px;
+            height: 31px;
         }
     </style>
 </head>
@@ -158,10 +139,66 @@
                         <asp:Label ID="labPassword" runat="server" Text="Password"></asp:Label>
                     </td>
                     <td class="auto-style12">
-                        <asp:TextBox ID="txtPassword" runat="server" Type="password" Height="54px" Width="367px"></asp:TextBox>
+                        <asp:TextBox ID="txtPassword" runat="server" TextMode="Password" Height="54px" Width="367px" placeholder="Must have special characters, numbers and upper/lower case letters " onkeyup="checkPasswordStrength()" ></asp:TextBox>
+                        <asp:Label ID="lblMessage" runat="server" Font-Size="Smaller"></asp:Label>
+                        <script type="text/javascript">
+                            function checkPasswordStrength() {
+                                var passwordTextBox = document.getElementById("TextBox1");
+                                var password = passwordTextBox.value;
+                                var specialCharacters = "!£$%^&*_@#~?";
+                                var passwordScore = 0;
+
+                                passwordTextBox.style.color = "white";
+
+                                // Contains special characters
+                                for (var i = 0; i < password.length; i++) {
+                                    if (specialCharacters.indexOf(password.charAt(i)) > -1) {
+                                        passwordScore += 20;
+                                        break;
+                                    }
+                                }
+
+                                // Contains numbers
+                                if (/\d/.test(password))
+                                    passwordScore += 20;
+
+                                // Contains lower case letter
+                                if (/[a-z]/.test(password))
+                                    passwordScore += 20;
+
+                                // Contains upper case letter
+                                if (/[A-Z]/.test(password))
+                                    passwordScore += 20;
+
+                                if (password.length >= 8)
+                                    passwordScore += 20;
+
+                                var strength = "";
+                                var backgroundColor = "red";
+
+                                if (passwordScore >= 100) {
+                                    strength = "Strong";
+                                    backgroundColor = "green";
+                                }
+                                else if (passwordScore >= 80) {
+                                    strength = "Medium";
+                                    backgroundColor = "gray";
+                                }
+                                else if (passwordScore >= 60) {
+                                    strength = "Weak";
+                                    backgroundColor = "maroon";
+                                }
+                                else {
+                                    strength = "Very Weak";
+                                    backgroundColor = "red";
+                                }
+
+                                document.getElementById("lblMessage").innerHTML = strength;
+                                passwordTextBox.style.backgroundColor = backgroundColor;
+                            }
+                        </script>
                         <br />
                         <asp:RequiredFieldValidator ID="requiredPassword" runat="server" ControlToValidate="txtPassword" ErrorMessage="Must enter a password" Font-Bold="True" Font-Size="Small" ForeColor="Red" Display="None"></asp:RequiredFieldValidator>
-
                     </td>
 
                 </tr>
@@ -170,7 +207,7 @@
                         <asp:Label ID="labConfirmPassword" runat="server" Text="Confirm Password"></asp:Label>
                     </td>
                     <td class="auto-style9">
-                        <asp:TextBox ID="txtConfirmPassword" runat="server" OnTextChanged="txtConfirmPassword_TextChanged" type="password" Height="54px" Width="367px"></asp:TextBox>
+                        <asp:TextBox ID="txtConfirmPassword" runat="server" OnTextChanged="txtConfirmPassword_TextChanged" TextMode="Password" Height="54px" Width="367px"></asp:TextBox>
                         <br />
                         <asp:CompareValidator ID="CompareValidator1" runat="server" ControlToCompare="txtPassword" ControlToValidate="txtConfirmPassword" ErrorMessage="Passwords must match" Font-Bold="True" Font-Size="Small" ForeColor="Red"></asp:CompareValidator>
                         <asp:RequiredFieldValidator ID="requiredConfirmPassword" runat="server" ControlToValidate="txtConfirmPassword" ErrorMessage="Required confirm password" Font-Bold="True" Font-Size="Small" ForeColor="Red" Display="None"></asp:RequiredFieldValidator>
@@ -181,7 +218,7 @@
             </table>
 
             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;
-            <asp:Button ID="btnRegister" runat="server" Text="Register !" OnClick="btnRegister_Click2" />
+            <asp:Button ID="btnRegister" runat="server" Text="Register !" OnClick="CreateUser" />
             &nbsp;
             
             <br />
@@ -204,7 +241,7 @@
                 </li>
             </ul>
 
-        <asp:ValidationSummary ID="ValidationSummary1" runat="server" Font-Italic="True" Font-Size="Larger" ForeColor="Red" HeaderText="The following errors occured:" Height="55px" Width="431px" DisplayMode="List" />
+            <asp:ValidationSummary ID="ValidationSummary1" runat="server" Font-Italic="True" Font-Size="Larger" ForeColor="Red" HeaderText="The following errors occured:" Height="55px" Width="431px" DisplayMode="List" />
         </div>
 
     </form>
