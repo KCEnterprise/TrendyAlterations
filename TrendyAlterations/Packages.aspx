@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Packages.aspx.cs" Inherits="TrendyAlterations.Products" %>
+﻿ <%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Packages.aspx.cs" Inherits="TrendyAlterations.Products" %>
 
 <!DOCTYPE html>
 
@@ -156,7 +156,7 @@
 
         <ul class="list-inline d-flex justify-content-center" id="myTab" role="tablist">
             <li class="nav-item">
-                <a class="nav-link " id="home-tab" data-toggle="tab" href="homepage.aspx" role="tab" aria-controls="home" aria-selected="true">Home</a>
+                <a class="nav-link " id="home-tab" data-toggle="tab" href="homepage.aspx" role="tab" aria-controls="home" aria-selected="false">Home</a>
             </li>
             <li class="nav-item">
                 <a class="nav-link" id="profile-tab" data-toggle="tab" href="About.aspx" role="tab" aria-controls="profile" aria-selected="false">About</a>
@@ -171,9 +171,9 @@
 
       <div class="row mx-md-px-n5 pt-5">
           <div class="col px-5">
-              <div class="p-3  bg-light">
+              <div class="p-3  bg-light container-fluid">
                   <h2 style="text-align: center;">Formal Alterations</h2>
-                        <ul class="product" id:"formalproducts" style="list-style-type: none" >
+                        <ul class="product" id="formalproducts" style="list-style-type: none" >
                                 <li class="auto-style24">
                                         <div style="float:left">
                                             <asp:Image ID="Image2"  runat="server"  CssClass="shop-item-image" ImageURL="~/Images/Fsleeve.jpg"   Height="196px" Width="205px"  />
@@ -192,12 +192,11 @@
                                                   <br />
                                                 <asp:Label ID="Label5" runat="server" Text="Label">Description: Sleeve cutting, sleeve take in and sleeve removal </asp:Label>
                                                   <br />
-                                        </div>                                       
+                                        </div> 
                                 </li>
                             
                                 <li class="auto-style24"  > 
                                    <br />
-                                    <div>
                                         <div style="float:left">
                                             <asp:Image ID="Image3" runat="server"  CssClass="shop-item-image" ImageURL="~/Images/F_hemming.jpg"    Height="196px" Width="205px"  />
                                            </div>
@@ -216,13 +215,12 @@
                                                 <asp:Label ID="Label10" runat="server" Text="Label">Description: Hem repairs, hem installation, cut and Hem </asp:Label>
                                                   <br />
                                         </div>
-                                    </div>
                                 </li>
 
                             <li class="auto-style24"  > 
                                 <br /><br />
                                     <div style="float:left">
-                                        <asp:Image ID="Image4" runat="server" CssClass="shop-item-image" ImageURL="~/Images/Ftakein.jpg"    Height="196px" Width="205px"  />
+                                        <asp:Image ID="Image4" runat="server" CssClass="shop-item-image" ImageURL="~/Images/Ftakein.jpg"    Height="175px" Width="205px"  />
                                       </div>
                                     <div class="auto-style25" style="font-family: 'times New Roman', Times, serif; font-size: large;">
                                            <asp:Label ID="Label11" runat="server" Text="F_Hem" ForeColor="#9966FF" Font-Bold="True"></asp:Label>&nbsp;&nbsp;||&nbsp;&nbsp;

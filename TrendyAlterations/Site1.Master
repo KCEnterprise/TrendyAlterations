@@ -1,5 +1,5 @@
 ﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site1.master.cs" Inherits="TrendyAlterations.Site1" %>
-
+ 
 <!DOCTYPE html>
 
 <html xmlns="http://www.w3.org/1999/xhtml">
@@ -35,7 +35,7 @@
                 <p class="auto-style3">"SNIPPED TO FIT"</p>
             </div>
         </header>
-       
+       <nav class="nav flex-column">
             <ul class="list-inline d-flex justify-content-center" id="myTab" role="tablist">
                 <li class="nav-item">
                     <a class="nav-link " id="home-tab" data-toggle="tab" href="homepage.aspx" role="tab" aria-controls="home" aria-selected="false">Home</a>
@@ -50,7 +50,7 @@
                     <a class="nav-link" id="settings-tab" data-toggle="tab" href="Contact.aspx" role="tab" aria-controls="settings" aria-selected="false">Contact Us</a>
                 </li>
             </ul>
-       
+       </nav>
 
 
 

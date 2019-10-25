@@ -109,6 +109,10 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="About.aspx" />
+    <Content Include="App_Data\TrendyAccesDatabase.mdf" />
+    <Content Include="App_Data\TrendyAccesDatabase_log.ldf">
+      <DependentUpon>TrendyAccesDatabase.mdf</DependentUpon>
+    </Content>
     <Content Include="assets\css\font-awesome.min.css" />
     <Content Include="assets\css\main.css" />
     <Content Include="assets\fonts\fontawesome-webfont.svg" />
@@ -200,6 +204,7 @@
     <Content Include="Scripts\umd\popper.js" />
     <Content Include="Scripts\umd\popper.min.js" />
     <Content Include="Login.aspx" />
+    <Content Include="WebForm1.aspx" />
     <Content Include="Welcomepage.aspx" />
     <Content Include="Web.config" />
   </ItemGroup>
@@ -255,6 +260,13 @@
     <Compile Include="Login.aspx.designer.cs">
       <DependentUpon>Login.aspx</DependentUpon>
     </Compile>
+    <Compile Include="WebForm1.aspx.cs">
+      <DependentUpon>WebForm1.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebForm1.aspx.designer.cs">
+      <DependentUpon>WebForm1.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Welcomepage.aspx.cs">
       <DependentUpon>Welcomepage.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -309,9 +321,7 @@
   <ItemGroup>
     <Service Include="{4A0DDDB5-7A95-4FBF-97CC-616D07737A77}" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="App_Data\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <WCFMetadata Include="Connected Services\" />
   </ItemGroup>

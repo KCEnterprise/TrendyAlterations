@@ -1456,6 +1456,12 @@
     float:left;
 }
 
+.custom-collapse .collapse {
+    display: block;
+}
+
+}
+
 .btn btn-primary shop-item-button{
     height:23px;
     font-size:smaller;

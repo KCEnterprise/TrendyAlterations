@@ -60,13 +60,15 @@
 
         <!-- Banner -->
 					<section id="intro" class="main">
+                        <div class="shadow-sm p-3 mb-3 bg-white rounded">
 						<br /><br />
 						<h2>Contact Us</h2>
                         <ul class="contactlist">
                             <li>Telephone: (876) 123- 4567 </li>
                             <li>Email: TRENDYalt@hotmail.com </li>
 							<li>Facebook: TRENDY Alterations</li>
-						</ul>						
+						</ul>
+                            </div>
 						
 					</section>
     </form>
