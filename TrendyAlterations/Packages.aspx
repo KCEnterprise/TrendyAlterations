@@ -169,88 +169,74 @@
             </li>
         </ul>
 
-      <div class="row mx-md-px-n5 pt-5">
-          <div class="col px-5">
+      <div class="row mx-md-px-n5 pt-5 justify-content-center">
+          <div class="col-7 px-5">
               <div class="p-3  bg-light container-fluid">
-                  <h2 style="text-align: center;">Formal Alterations</h2>
-                        <ul class="product" id="formalproducts" style="list-style-type: none" >
-                                <li class="auto-style24">
-                                        <div style="float:left">
-                                            <asp:Image ID="Image2"  runat="server"  CssClass="shop-item-image" ImageURL="~/Images/Fsleeve.jpg"   Height="196px" Width="205px"  />
-                                          </div>
-                                        <div class="auto-style25" style="font-family: 'times New Roman', Times, serif; font-size: large;">
-                                                <asp:Label ID="Label1"  runat="server" Text="F_SleeveAlt" ForeColor="#9966FF" Font-Bold="True"></asp:Label>&nbsp;&nbsp;||&nbsp;&nbsp;
-                                                <asp:Label ID="Label2" runat="server" Class="shop-item-title"  ForeColor="#9966FF" Text="Sleeve Adjustment" Font-Bold="True"></asp:Label>
-                                                  <br />
-                                                <asp:Label ID="Label3" runat="server" Class="shop-item-price" Text="Label">$4000</asp:Label>
-                                                  &nbsp;&nbsp;
-                                                  <br />
-                                                <asp:Label ID="Label4" runat="server" Text="Formal" Font-Names="Segoe Script"></asp:Label>
-                                                &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;
-                                                <button class="btn btn-primary shop-item-button" type="button">ADD TO CART</button>
-                                                <br />
-                                                  <br />
-                                                <asp:Label ID="Label5" runat="server" Text="Label">Description: Sleeve cutting, sleeve take in and sleeve removal </asp:Label>
-                                                  <br />
-                                        </div> 
-                                </li>
-                            
-                                <li class="auto-style24"  > 
-                                   <br />
-                                        <div style="float:left">
-                                            <asp:Image ID="Image3" runat="server"  CssClass="shop-item-image" ImageURL="~/Images/F_hemming.jpg"    Height="196px" Width="205px"  />
-                                           </div>
-                                        <div class="auto-style25" id="FSleeveProduct" style="font-family: 'times New Roman', Times, serif; font-size: large;">
-                                               <asp:Label ID="Label6" CssClass="ID" runat="server" Text="F_Hem" ForeColor="#9966FF" Font-Bold="True"></asp:Label>&nbsp;&nbsp;||&nbsp;&nbsp;
-                                                <asp:Label ID="Label7" Class="shop-item-title" runat="server"  ForeColor="#9966FF" Font-Bold="True">Hemming</asp:Label>
-                                                  <br />
-                                                <asp:Label ID="Label8" Class="shop-item-price" runat="server" Text="Label">$2500</asp:Label>
-                                                  <br />
-                                                <asp:Label ID="Label9" runat="server" Text="Formal" Font-Names="Segoe Script"></asp:Label>
-                                                &nbsp; &nbsp;&nbsp;&nbsp;
-                                                <button class="btn btn-primary shop-item-button" type="button">ADD TO CART</button>
-                                                &nbsp;&nbsp;
-                                                <br />
-                                                  <br />
-                                                <asp:Label ID="Label10" runat="server" Text="Label">Description: Hem repairs, hem installation, cut and Hem </asp:Label>
-                                                  <br />
-                                        </div>
-                                </li>
+                  <h2 style="text-align: center;">Formal Alterations</h2>                  
+                    <div class="row p-4 justify-content-center">
 
-                            <li class="auto-style24"  > 
-                                <br /><br />
-                                    <div style="float:left">
-                                        <asp:Image ID="Image4" runat="server" CssClass="shop-item-image" ImageURL="~/Images/Ftakein.jpg"    Height="175px" Width="205px"  />
-                                      </div>
-                                    <div class="auto-style25" style="font-family: 'times New Roman', Times, serif; font-size: large;">
-                                           <asp:Label ID="Label11" runat="server" Text="F_Hem" ForeColor="#9966FF" Font-Bold="True"></asp:Label>&nbsp;&nbsp;||&nbsp;&nbsp;
-                                            <asp:Label ID="Label12" Class="shop-item-title" runat="server"  ForeColor="#9966FF" Font-Bold="True">Take In</asp:Label>
-                                              <br />
-                                            <asp:Label ID="Label13" Class="shop-item-price" runat="server" Text="Label">$5000</asp:Label>
-                                              <br />
-                                            <asp:Label ID="Label14" runat="server" Text="Formal" Font-Names="Segoe Script"></asp:Label>
-                                            &nbsp;&nbsp;&nbsp; &nbsp;
-                                                <button class="btn btn-primary shop-item-button" type="button">ADD TO CART</button>
-                                            <br />
-                                              <br />
-                                            <asp:Label ID="Label15" runat="server" Text="Label">Description: Take In Waist, let out waist </asp:Label>
-                                              <br />
-                                    </div>
-                        </li>
-                        
-					</ul>
+                        <div class="col-sm" style="height: 400px;">
+                              <asp:Image ID="Image2"  runat="server"  CssClass="shop-item-image" ImageURL="~/Images/Fsleeve.jpg"   Height="196px" Width="205px"  />
+                              <asp:Label ID="Label1"  runat="server" Text="F_SleeveAlt" ForeColor="#9966FF" Font-Bold="True"></asp:Label> <br/>
+                              <asp:Label ID="Label2" runat="server" Class="shop-item-title"  ForeColor="#9966FF" Text="Sleeve Adjustment" Font-Bold="True"></asp:Label> <br/>
+                              <asp:Label ID="Label3" runat="server" Class="shop-item-price" Text="Label">$4000</asp:Label> 
+                              <asp:Label ID="Label4" runat="server" Text="Formal" Font-Names="Segoe Script"></asp:Label>
+                               <asp:Label ID="Label5" runat="server" Text="Label">Description: Sleeve cutting, sleeve take in and sleeve removal </asp:Label>
+                              <button class="btn btn-primary shop-item-button" type="button">ADD TO CART</button>
+                        </div>
+                       <div class="col-sm" style="height: 400px;">
+                              <asp:Image ID="Image3" runat="server"  CssClass="shop-item-image" ImageURL="~/Images/F_hemming.jpg"    Height="196px" Width="205px"  /> <br />
+                              <asp:Label ID="Label6" CssClass="ID" runat="server" Text="F_Hem" ForeColor="#9966FF" Font-Bold="True"></asp:Label> <br />
+                              <asp:Label ID="Label7" Class="shop-item-title" runat="server"  ForeColor="#9966FF" Font-Bold="True">Hemming</asp:Label> <br />
+                              <asp:Label ID="Label8" Class="shop-item-price" runat="server" Text="Label">$2500</asp:Label> <br />
+                              <asp:Label ID="Label9" runat="server" Text="Formal" Font-Names="Segoe Script"></asp:Label>
+                              <asp:Label ID="Label10" runat="server" Text="Label">Description: Hem repairs, hem installation, cut and Hem </asp:Label>
+                              <button class="btn btn-primary shop-item-button" type="button">ADD TO CART</button>
+                       </div>
+                       <div class="col-sm">
+                              <asp:Image ID="Image4" runat="server" CssClass="shop-item-image" ImageURL="~/Images/Ftakein.jpg"    Height="175px" Width="205px"  />
+                              <asp:Label ID="Label11" runat="server" Text="F_Hem" ForeColor="#9966FF" Font-Bold="True"></asp:Label>
+                              <asp:Label ID="Label12" Class="shop-item-title" runat="server"  ForeColor="#9966FF" Font-Bold="True">Take In</asp:Label>
+                               <asp:Label ID="Label13" Class="shop-item-price" runat="server" Text="Label">$5000</asp:Label>
+                              <asp:Label ID="Label14" runat="server" Text="Formal" Font-Names="Segoe Script"></asp:Label>                              
+                               <asp:Label ID="Label15" runat="server" Text="Label">Description: Take In Waist, let out waist </asp:Label> <br />
+                             <button class="btn btn-primary shop-item-button" type="button">ADD TO CART</button>
+                       </div>                       
+                   </div>
+               
+                  <div class="row p-4 justify-content-center">
+                      <div class="col-sm">
+                              One of three columns
+                            </div>
+                       <div class="col-sm">
+                              One of three columns
+                            </div>
+                       <div class="col-sm">
+                              One of three columns
+                            </div>
+                       <div class="col-sm">
+                              One of three columns
+                            </div>
+                          
 
+                   </div>
               </div>
 
           </div>
-          <div class="col px-5">
+
+          <div class="col-4 px-5">
               <div class="p-3  bg-light">                 
                     <h2 style="text-align: center;">Shopping Cart</h2>
                    
                     <div class="cart-row">
-                        <span class="cart-item cart-header cart-column">&nbsp;&nbsp; ITEM</span>
-                        <span class="cart-price cart-header cart-column">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; |&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; PRICE</span>
-                        <span class="cart-quantity cart-header cart-column">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; |&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; QUANTITY</span>
+                        <div class="row py-4">
+                            <div class="col-sm" >ITEM</div>
+                            <div class="col-sm" >PRICE</div>
+                            <div class="col-sm" >QUANTITY</div>
+                        </div>
+                        <span class="cart-item cart-header cart-column"></span>
+                        <span class="cart-price cart-header cart-column"></span>
+                        <span class="cart-quantity cart-header cart-column"></span>
                     </div>
                     <div class="cart-items">
                     </div>
@@ -262,7 +248,10 @@
               </div>
 
           </div>
+
+          
     </div>
+       
     </form>
 </body>
 </html>
