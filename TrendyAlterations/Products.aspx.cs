@@ -13,5 +13,10 @@ namespace TrendyAlterations
         {
 
         }
+
+        protected void addToCart(object sender, EventArgs e)
+        {
+            
+        }
     }
 }

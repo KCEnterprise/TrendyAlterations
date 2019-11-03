@@ -224,7 +224,7 @@
 
           </div>
 
-          <div class="col-4 px-5">
+          <div class="col-lg-4 px-5">
               <div class="p-3  bg-light">                 
                     <h2 style="text-align: center;">Shopping Cart</h2>
                    

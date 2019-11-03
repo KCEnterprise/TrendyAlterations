@@ -1,7 +1,7 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site1.Master" AutoEventWireup="true" CodeBehind="Login.aspx.cs" Inherits="TrendyAlterations.WebForm3" %>
 
 
-<asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="Server">
+<asp:Content ID="Login" ContentPlaceHolderID="MainContent" runat="Server">
 
 
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" />
