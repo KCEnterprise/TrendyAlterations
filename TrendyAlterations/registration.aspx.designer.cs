@@ -267,15 +267,6 @@ namespace TrendyAlterations
         protected global::System.Web.UI.WebControls.Button btnRegister;
 
         /// <summary>
-        /// lblMembersCount control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblMembersCount;
-
-        /// <summary>
         /// ValidationSummary1 control.
         /// </summary>
         /// <remarks>

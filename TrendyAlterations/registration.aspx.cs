@@ -35,10 +35,13 @@ namespace TrendyAlterations
             if (result.Succeeded)
                 {
                 if (IsValid) {
-                    Session["FirstName"] = txtFirstName.Text;
-                    Session["LastName"] = txtLastName.Text;
+                    Session["User"] = txtFirstName.Text + " " + txtLastName.Text;
                     Response.Redirect("Welcomepage.aspx");
                 }
+            }
+            else
+            {
+                Response.Redirect("registration.aspx");
             }
 
        }

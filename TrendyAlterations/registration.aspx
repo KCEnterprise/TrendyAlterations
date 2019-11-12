@@ -139,11 +139,11 @@
                         <asp:Label ID="labPassword" runat="server" Text="Password"></asp:Label>
                     </td>
                     <td class="auto-style12">
-                        <asp:TextBox ID="txtPassword" runat="server" TextMode="Password" Height="54px" Width="367px" placeholder="Must have special characters, numbers and upper/lower case letters " onkeyup="checkPasswordStrength()" ></asp:TextBox>
+                        <asp:TextBox ID="txtPassword" runat="server" TextMode="Password" Height="54px" Width="367px" placeholder="Must have special characters, numbers and upper/lower case letters" onkeyup="checkPasswordStrength()" ></asp:TextBox>
                         <asp:Label ID="lblMessage" runat="server" Font-Size="Smaller"></asp:Label>
                         <script type="text/javascript">
                             function checkPasswordStrength() {
-                                var passwordTextBox = document.getElementById("TextBox1");
+                                var passwordTextBox = document.getElementById("txtPassword");
                                 var password = passwordTextBox.value;
                                 var specialCharacters = "!£$%^&*_@#~?";
                                 var passwordScore = 0;
@@ -220,10 +220,6 @@
             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;
             <asp:Button ID="btnRegister" runat="server" Text="Register !" OnClick="CreateUser" />
             &nbsp;
-            
-            <br />
-            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Total Members Registered:&nbsp;&nbsp;
-            <asp:Label ID="lblMembersCount" runat="server" Font-Bold="True" Font-Underline="True" ForeColor="Blue"></asp:Label>
         </div>
         <div>
             <ul class="list-inline d-flex justify-content-center" id="myTab" role="tablist">

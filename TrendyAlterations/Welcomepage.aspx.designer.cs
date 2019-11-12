@@ -7,11 +7,13 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace TrendyAlterations {
-    
-    
-    public partial class Welcomepage {
-        
+namespace TrendyAlterations
+{
+
+
+    public partial class Welcomepage
+    {
+
         /// <summary>
         /// form1 control.
         /// </summary>
@@ -20,7 +22,7 @@ namespace TrendyAlterations {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.HtmlControls.HtmlForm form1;
-        
+
         /// <summary>
         /// hprlogo control.
         /// </summary>
@@ -29,7 +31,7 @@ namespace TrendyAlterations {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.HyperLink hprlogo;
-        
+
         /// <summary>
         /// Image1 control.
         /// </summary>
@@ -38,25 +40,16 @@ namespace TrendyAlterations {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Image Image1;
-        
+
         /// <summary>
-        /// lblfName control.
+        /// lblName control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblfName;
-        
-        /// <summary>
-        /// lbllName control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lbllName;
-        
+        protected global::System.Web.UI.WebControls.Label lblName;
+
         /// <summary>
         /// HyplHome control.
         /// </summary>
@@ -65,7 +58,7 @@ namespace TrendyAlterations {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.HyperLink HyplHome;
-        
+
         /// <summary>
         /// HyplAbout control.
         /// </summary>
@@ -74,7 +67,7 @@ namespace TrendyAlterations {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.HyperLink HyplAbout;
-        
+
         /// <summary>
         /// HyplPackages control.
         /// </summary>
@@ -83,7 +76,7 @@ namespace TrendyAlterations {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.HyperLink HyplPackages;
-        
+
         /// <summary>
         /// HyplContact control.
         /// </summary>

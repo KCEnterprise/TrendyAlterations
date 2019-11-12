@@ -53,7 +53,7 @@
          <div>         
             <div class="auto-style13">
                
-                <h3>WELCOME&nbsp;&nbsp;&nbsp;<asp:Label ID="lblfName" runat="server" Font-Size="X-Large"/>&nbsp;&nbsp;<asp:Label ID="lbllName" runat="server" Font-Size="X-Large"/> </h3> 
+                <h3>WELCOME&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<asp:Label ID="lblName" runat="server" Font-Size="X-Large"/> </h3> 
                
             </div>
         </div>

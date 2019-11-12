@@ -13,9 +13,7 @@ namespace TrendyAlterations
         {
             if (!IsPostBack)
             {
-                lblfName.Text = Session["FirstName"].ToString();
-                lbllName.Text = Session["LastName"].ToString();
-
+                lblName.Text = Session["User"].ToString();
             }
 
         }
