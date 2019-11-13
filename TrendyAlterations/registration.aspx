@@ -49,11 +49,7 @@
             height: 721px;
         }
 
-        .auto-style18 {
-            width: 101px;
-            height: 31px;
-        }
-    </style>
+        </style>
 </head>
 <body>
     <form id="form1" runat="server" class="auto-style17">
@@ -72,28 +68,14 @@
             <table class="auto-style16">
                 <tr>
                     <td class="auto-style1">
-                        <asp:Label ID="lblFirstName" runat="server" Text="First Name"></asp:Label>
+                        <asp:Label ID="lblUsername" runat="server" Text="Username"></asp:Label>
                     </td>
                     <td class="auto-style1">
-                        <asp:TextBox ID="txtFirstName" runat="server" Height="54px" Width="367px"></asp:TextBox>
-                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<asp:RequiredFieldValidator ID="RequiredFieldValidatorFirstName0" runat="server"
+                        <asp:TextBox ID="txtUsername" runat="server" Height="54px" Width="367px"></asp:TextBox>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<asp:RequiredFieldValidator ID="RequiredFieldValidatorUsername" runat="server"
                             ControlToValidate="txtFirstName"
-                            ErrorMessage="First Name Required"
+                            ErrorMessage="Username Required"
                             Display="None" ForeColor="Red" Font-Bold="True" Font-Italic="False" Font-Size="Small"></asp:RequiredFieldValidator>
-                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                    </td>
-
-                </tr>
-                <tr>
-                    <td class="auto-style1">
-                        <asp:Label ID="labLastName" runat="server" Text="Last Name"></asp:Label>
-                    </td>
-                    <td class="auto-style1">
-                        <asp:TextBox ID="txtLastName" runat="server" Height="54px" Width="367px"></asp:TextBox>
-                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<asp:RequiredFieldValidator ID="RequiredFieldValidatorLastName1" runat="server"
-                            ControlToValidate="txtLastName"
-                            ErrorMessage="Last Name Required"
-                            Display="None" ForeColor="Red" Font-Bold="True" Font-Italic="False" Font-Size="Small" InitialValue=" "></asp:RequiredFieldValidator>
                         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                     </td>
 

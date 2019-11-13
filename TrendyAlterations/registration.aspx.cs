@@ -16,26 +16,20 @@ namespace TrendyAlterations
         
         protected void Page_Load(object sender, EventArgs e)
         {
-            //if (!IsPostBack)
-            //{
-            //    if (Application["membersCounter"] == null)
-            //    {
-            //        Application["membersCounter"] = 0;
-            //    }
-            //    lblMembersCount.Text = Application["membersCounter"].ToString();
-            //}
+            
         }
+        
         protected void CreateUser(object sender, EventArgs e)
         {
             var userStore = new UserStore<IdentityUser>();
             var manager = new UserManager<IdentityUser>(userStore);
 
-            var user = new IdentityUser() { UserName = txtFirstName.Text };
+            var user = new IdentityUser() { UserName = txtUsername.Text, Email = txtEmail.Text,  PhoneNumber = txtPhoneNumber.Text, PasswordHash = txtPassword.Text  };
             IdentityResult result = manager.Create(user, txtPassword.Text);
             if (result.Succeeded)
                 {
                 if (IsValid) {
-                    Session["User"] = txtFirstName.Text + " " + txtLastName.Text;
+                    Session["User"] = txtUsername.Text;
                     Response.Redirect("Welcomepage.aspx");
                 }
             }
