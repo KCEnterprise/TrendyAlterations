@@ -41,16 +41,21 @@
     </style>
     <div class="shadow-lg p-3 mb-5 bg-white rounded">
         <div class="login-form">
-            <form action="/examples/actions/confirmation.php" method="post">
+            <form>
                 <h2 class="text-center">Log in</h2>
+                <asp:PlaceHolder runat="server" ID="LoginStatus" Visible="false">
+                    <p>
+                        <asp:Literal runat="server" ID="StatusText" />
+                   </p>
+                </asp:PlaceHolder>
                 <div class="form-group">
-                    <input type="text" class="form-control" placeholder="Username" required="required" />
+                     <asp:TextBox runat="server" required="required" placeholder="Username" class="form-control" ID="Username" />
                 </div>
                 <div class="form-group">
-                    <input type="password" class="form-control" placeholder="Password" required="required" />
+                    <asp:TextBox runat="server" required="required" placeholder="Password" class="form-control" ID="Password" TextMode="Password" />
                 </div>
-                <div class="form-group">
-                    <button type="submit" class="btn btn-primary btn-block">Log in</button>
+                <div class="form-group">                    
+                   <asp:Button runat="server" class="btn btn-primary btn-block" OnClick="SignIn" Text="Log in" />
                 </div>
             </form>
         </div>

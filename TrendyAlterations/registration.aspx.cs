@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using Microsoft.AspNet.Identity;
 using Microsoft.AspNet.Identity.EntityFramework;
+using Microsoft.Owin.Security;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
@@ -28,6 +29,10 @@ namespace TrendyAlterations
             IdentityResult result = manager.Create(user, txtPassword.Text);
             if (result.Succeeded)
                 {
+                var authenticationManager = HttpContext.Current.GetOwinContext().Authentication;
+                var userIdentity = manager.CreateIdentity(user, DefaultAuthenticationTypes.ApplicationCookie);
+                authenticationManager.SignIn(new AuthenticationProperties() { }, userIdentity);
+
                 if (IsValid) {
                     Session["User"] = txtUsername.Text;
                     Response.Redirect("Welcomepage.aspx");

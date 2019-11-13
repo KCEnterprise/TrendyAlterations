@@ -73,7 +73,7 @@
                     <td class="auto-style1">
                         <asp:TextBox ID="txtUsername" runat="server" Height="54px" Width="367px"></asp:TextBox>
                         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<asp:RequiredFieldValidator ID="RequiredFieldValidatorUsername" runat="server"
-                            ControlToValidate="txtFirstName"
+                            ControlToValidate="txtUsername"
                             ErrorMessage="Username Required"
                             Display="None" ForeColor="Red" Font-Bold="True" Font-Italic="False" Font-Size="Small"></asp:RequiredFieldValidator>
                         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
