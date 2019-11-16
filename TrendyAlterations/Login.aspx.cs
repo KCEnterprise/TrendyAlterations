@@ -14,8 +14,8 @@ namespace TrendyAlterations
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            //if (!IsPostBack)
-            //{
+            if (!IsPostBack)
+            {
             //    if (User.Identity.IsAuthenticated)
             //    {
             //        Response.Redirect("Welcomepage.aspx");
@@ -24,9 +24,11 @@ namespace TrendyAlterations
             //    {
             //        //something
             //    }
-            //}
+            }
+           
         }
 
+        
         protected void SignIn(object sender, EventArgs e)
         {
             var userStore = new UserStore<IdentityUser>();
@@ -49,5 +51,37 @@ namespace TrendyAlterations
                 LoginStatus.Visible = true;
             }
         }
+
+        protected void CreateAdmin() //Create Admin User in code rather than sign up
+        {
+            var userManager = new UserManager<IdentityUser>(new UserStore<IdentityUser>());
+            var roleManager = new RoleManager<IdentityRole>(new RoleStore<IdentityRole>());
+            const string name = "adminis";
+            const string password = "adminPassword";
+            const string roleName = "Admin";
+
+            //Create Role Admin if it does not exist
+            var role = roleManager.FindByName(roleName);
+            if (role == null)
+            {
+                role = new IdentityRole(roleName);
+                roleManager.Create(role);
+            }
+            var user = userManager.FindByName(name);
+            if (user == null)
+            {
+                user = new IdentityUser() { UserName = name, Email = name };
+                userManager.Create(user, password);
+                userManager.SetLockoutEnabled(user.Id, false);
+            }
+            // Add user admin to Role Admin if not already added
+            var rolesForUser = userManager.GetRoles(user.Id);
+            if (!rolesForUser.Contains(role.Name))
+            {
+                userManager.AddToRole(user.Id, role.Name);
+            }
+        }
+
+
     }
 }
