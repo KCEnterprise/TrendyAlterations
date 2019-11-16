@@ -4,6 +4,9 @@ using System.Linq;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
+using Microsoft.AspNet.Identity;
+using Microsoft.AspNet.Identity.EntityFramework;
+using Microsoft.Owin.Security;
 
 namespace TrendyAlterations
 {
@@ -13,7 +16,6 @@ namespace TrendyAlterations
         {
             if (!IsPostBack)
             {
-                
                     if (User.IsInRole("Customer"))
                     {
                         HyplHidden1.Text = "Order History";
@@ -24,7 +26,7 @@ namespace TrendyAlterations
                         HyplHidden2.Visible = true;
                         HyplHidden2.NavigateUrl = "";
 
-                        lblName.Text = Session["User"].ToString();
+                        //lblName.Text = Session["User"].ToString();
                     }
 
                     if (User.IsInRole("Admin"))
@@ -37,15 +39,20 @@ namespace TrendyAlterations
                         HyplHidden2.Visible = true;
                         HyplHidden2.NavigateUrl = "";
 
-                        lblName.Text = Session["User"].ToString();
+                        //lblName.Text = Session["User"].ToString();
                     }
-
-
-
+                
             }
 
         }
 
-        
+        protected void SignOut(object sender, EventArgs e) // Sign Out Fuunction
+        {
+            var authenticationManager = HttpContext.Current.GetOwinContext().Authentication;
+            authenticationManager.SignOut();
+            Response.Redirect("~/homepage.aspx");
+        }
+
+
     }
 }

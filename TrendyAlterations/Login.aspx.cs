@@ -14,17 +14,17 @@ namespace TrendyAlterations
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            if (!IsPostBack)
-            {
-                if (User.Identity.IsAuthenticated)
-                {
-                    Response.Redirect("Welcomepage.aspx");
-                }
-                else
-                {
-                    //something
-                }
-            }
+            //if (!IsPostBack)
+            //{
+            //    if (User.Identity.IsAuthenticated)
+            //    {
+            //        Response.Redirect("Welcomepage.aspx");
+            //    }
+            //    else
+            //    {
+            //        //something
+            //    }
+            //}
         }
 
         protected void SignIn(object sender, EventArgs e)
