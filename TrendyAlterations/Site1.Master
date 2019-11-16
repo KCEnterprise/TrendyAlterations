@@ -44,6 +44,9 @@
                     <a class="nav-link" id="profile-tab" data-toggle="tab" href="About.aspx" role="tab" aria-controls="profile" aria-selected="false">About</a>
                 </li>
                 <li class="nav-item">
+                    <a class="nav-link" id="order_history-tab" data-toggle="tab" href="Contact.aspx" role="tab" aria-controls="settings" aria-selected="false" hidden="hidden">Order History</a>
+                </li>
+                <li class="nav-item">
                     <a class="nav-link" id="messages-tab" data-toggle="tab" href="Packages.aspx" role="tab" aria-controls="messages" aria-selected="false">Packages</a>
                 </li>
                 <li class="nav-item">

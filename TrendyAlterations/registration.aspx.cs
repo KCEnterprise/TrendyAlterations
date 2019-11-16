@@ -25,47 +25,39 @@ namespace TrendyAlterations
             var userStore = new UserStore<IdentityUser>();
             var manager = new UserManager<IdentityUser>(userStore);
 
-            var user = new IdentityUser() { UserName = txtUsername.Text, Email = txtEmail.Text,  PhoneNumber = txtPhoneNumber.Text, PasswordHash = txtPassword.Text  };
+            var user = new IdentityUser() { UserName = txtUsername.Text, Email = txtEmail.Text, PhoneNumber = txtPhoneNumber.Text, PasswordHash = txtPassword.Text };
             IdentityResult result = manager.Create(user, txtPassword.Text);
+            var roleManager = new RoleManager<IdentityRole>(new RoleStore<IdentityRole>());
+            if (!roleManager.RoleExists("Customer"))
+            {
+                var role = new Microsoft.AspNet.Identity.EntityFramework.IdentityRole();
+                role.Name = "Customer";
+                roleManager.Create(role);
+            }
             if (result.Succeeded)
-                {
+            {
+                manager.AddToRole(user.Id, "Customer");
                 var authenticationManager = HttpContext.Current.GetOwinContext().Authentication;
                 var userIdentity = manager.CreateIdentity(user, DefaultAuthenticationTypes.ApplicationCookie);
                 authenticationManager.SignIn(new AuthenticationProperties() { }, userIdentity);
 
-                if (IsValid) {
+                if (IsValid)
+                { //if registration is valid
                     Session["User"] = txtUsername.Text;
                     Response.Redirect("Welcomepage.aspx");
                 }
             }
-            else
-            {
-                Response.Redirect("registration.aspx");
-            }
 
-       }
+        }
+
+
 
         protected void txtConfirmPassword_TextChanged(object sender, EventArgs e)
         {
 
         }
 
-        protected void Session_Start(object sender, EventArgs e)
-        {
-            
-        }
-
         
-        void Application_Start(object sender, EventArgs e)
-        {
-
-            Application["membersCounter"] = 0;
-
-        }
-
-        protected void CustomValidatorDOB_ServerValidate(object source, ServerValidateEventArgs args)
-        {
-
-        }
+        
     }
 }   

@@ -1,5 +1,6 @@
 ﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Welcomepage.aspx.cs" Inherits="TrendyAlterations.Welcomepage" %>
 
+
 <!DOCTYPE html>
 
 <html xmlns="http://www.w3.org/1999/xhtml">
@@ -17,19 +18,19 @@
             height: 67px;
             width: 656px;
             position: absolute;
-            top: 591px;
-            left: 741px;
+            top: 601px;
+            left: 585px;
             margin-top: 2px;
-            bottom: 218px;
+            bottom: 522px;
         }
         .auto-style14 {
             height: 50px;
             width: 821px;
             position: absolute;
-            top: 678px;
-            left: 675px;
+            top: 711px;
+            left: 505px;
             margin-top: 2px;
-            bottom: 268px;
+            bottom: 429px;
         }
     </style>
 </head>
@@ -59,6 +60,7 @@
         </div>
 
          <div class="auto-style14">
+             
                  <div>
 
                             <asp:HyperLink ID="HyplHome" runat="server" NavigateUrl="~/homepage.aspx">Home</asp:HyperLink>
@@ -71,8 +73,14 @@
 
                         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;
                             <asp:HyperLink ID="HyplContact" runat="server" NavigateUrl="~/Contact.aspx">Contact Us</asp:HyperLink>
+                      
+                     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;
+                            <asp:HyperLink ID="HyplHidden1" runat="server"  Visible="False"></asp:HyperLink>
 
-                            <br />
+                     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;
+                            <asp:HyperLink ID="HyplHidden2" runat="server"  Visible="False"></asp:HyperLink>
+
+                                                  <br />
         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 
                         </div>

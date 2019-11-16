@@ -51,6 +51,64 @@
 
         </style>
 </head>
+    <script type="text/javascript">
+        function checkPasswordStrength() {
+            var passwordTextBox = document.getElementById("txtPassword");
+            var password = passwordTextBox.value;
+            var specialCharacters = "!£$%^&*_@#~?";
+            var passwordScore = 0;
+
+            passwordTextBox.style.color = "white";
+
+            // Contains special characters
+            for (var i = 0; i < password.length; i++) {
+                if (specialCharacters.indexOf(password.charAt(i)) > -1) {
+                    passwordScore += 20;
+                    break;
+                }
+            }
+
+            // Contains numbers
+            if (/\d/.test(password))
+                passwordScore += 20;
+
+            // Contains lower case letter
+            if (/[a-z]/.test(password))
+                passwordScore += 20;
+
+            // Contains upper case letter
+            if (/[A-Z]/.test(password))
+                passwordScore += 20;
+
+            if (password.length >= 8)
+                passwordScore += 20;
+
+            var strength = "";
+            var backgroundColor = "red";
+
+            if (passwordScore >= 100) {
+                strength = "Strong";
+                backgroundColor = "green";
+            }
+            else if (passwordScore >= 80) {
+                strength = "Medium";
+                backgroundColor = "gray";
+            }
+            else if (passwordScore >= 60) {
+                strength = "Weak";
+                backgroundColor = "maroon";
+            }
+            else {
+                strength = "Very Weak";
+                backgroundColor = "red";
+            }
+
+            document.getElementById("lblMessage").innerHTML = strength;
+            passwordTextBox.style.backgroundColor = backgroundColor;
+        }
+                        </script>
+
+
 <body>
     <form id="form1" runat="server" class="auto-style17">
         <!-- Header -->
@@ -64,7 +122,13 @@
             </div>
 
         </header>
+        
+        
         <div class="auto-style7">
+            <div>
+                 <asp:ValidationSummary ID="ValidationSummary1" runat="server" Font-Italic="True" Font-Size="Larger" ForeColor="Red" HeaderText="The following errors occured:" Height="55px" Width="431px" DisplayMode="List" Visible="True" />
+                <br /><br />
+            </div>
             <table class="auto-style16">
                 <tr>
                     <td class="auto-style1">
@@ -72,10 +136,7 @@
                     </td>
                     <td class="auto-style1">
                         <asp:TextBox ID="txtUsername" runat="server" Height="54px" Width="367px"></asp:TextBox>
-                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<asp:RequiredFieldValidator ID="RequiredFieldValidatorUsername" runat="server"
-                            ControlToValidate="txtUsername"
-                            ErrorMessage="Username Required"
-                            Display="None" ForeColor="Red" Font-Bold="True" Font-Italic="False" Font-Size="Small"></asp:RequiredFieldValidator>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;<asp:RequiredFieldValidator ID="RequiredFieldValidatorUsername" runat="server" ControlToValidate="txtUsername" ErrorMessage="Username Required" ForeColor="Red" Font-Bold="True" Font-Size="Small" Display="None"></asp:RequiredFieldValidator>
                         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                     </td>
 
@@ -123,64 +184,9 @@
                     <td class="auto-style12">
                         <asp:TextBox ID="txtPassword" runat="server" TextMode="Password" Height="54px" Width="367px" placeholder="Must have special characters, numbers and upper/lower case letters" onkeyup="checkPasswordStrength()" ></asp:TextBox>
                         <asp:Label ID="lblMessage" runat="server" Font-Size="Smaller"></asp:Label>
-                        <script type="text/javascript">
-                            function checkPasswordStrength() {
-                                var passwordTextBox = document.getElementById("txtPassword");
-                                var password = passwordTextBox.value;
-                                var specialCharacters = "!£$%^&*_@#~?";
-                                var passwordScore = 0;
-
-                                passwordTextBox.style.color = "white";
-
-                                // Contains special characters
-                                for (var i = 0; i < password.length; i++) {
-                                    if (specialCharacters.indexOf(password.charAt(i)) > -1) {
-                                        passwordScore += 20;
-                                        break;
-                                    }
-                                }
-
-                                // Contains numbers
-                                if (/\d/.test(password))
-                                    passwordScore += 20;
-
-                                // Contains lower case letter
-                                if (/[a-z]/.test(password))
-                                    passwordScore += 20;
-
-                                // Contains upper case letter
-                                if (/[A-Z]/.test(password))
-                                    passwordScore += 20;
-
-                                if (password.length >= 8)
-                                    passwordScore += 20;
-
-                                var strength = "";
-                                var backgroundColor = "red";
-
-                                if (passwordScore >= 100) {
-                                    strength = "Strong";
-                                    backgroundColor = "green";
-                                }
-                                else if (passwordScore >= 80) {
-                                    strength = "Medium";
-                                    backgroundColor = "gray";
-                                }
-                                else if (passwordScore >= 60) {
-                                    strength = "Weak";
-                                    backgroundColor = "maroon";
-                                }
-                                else {
-                                    strength = "Very Weak";
-                                    backgroundColor = "red";
-                                }
-
-                                document.getElementById("lblMessage").innerHTML = strength;
-                                passwordTextBox.style.backgroundColor = backgroundColor;
-                            }
-                        </script>
+                        
                         <br />
-                        <asp:RequiredFieldValidator ID="requiredPassword" runat="server" ControlToValidate="txtPassword" ErrorMessage="Must enter a password" Font-Bold="True" Font-Size="Small" ForeColor="Red" Display="None"></asp:RequiredFieldValidator>
+                        <asp:RequiredFieldValidator ID="requiredPassword" runat="server" ControlToValidate="txtPassword" ErrorMessage="Password Required" Font-Bold="True" Font-Size="Small" ForeColor="Red" Display="None"></asp:RequiredFieldValidator>
                     </td>
 
                 </tr>
@@ -192,7 +198,7 @@
                         <asp:TextBox ID="txtConfirmPassword" runat="server" OnTextChanged="txtConfirmPassword_TextChanged" TextMode="Password" Height="54px" Width="367px"></asp:TextBox>
                         <br />
                         <asp:CompareValidator ID="CompareValidator1" runat="server" ControlToCompare="txtPassword" ControlToValidate="txtConfirmPassword" ErrorMessage="Passwords must match" Font-Bold="True" Font-Size="Small" ForeColor="Red"></asp:CompareValidator>
-                        <asp:RequiredFieldValidator ID="requiredConfirmPassword" runat="server" ControlToValidate="txtConfirmPassword" ErrorMessage="Required confirm password" Font-Bold="True" Font-Size="Small" ForeColor="Red" Display="None"></asp:RequiredFieldValidator>
+                        <asp:RequiredFieldValidator ID="requiredConfirmPassword" runat="server" ControlToValidate="txtConfirmPassword" ErrorMessage="Password Confirmation Required" Font-Bold="True" Font-Size="Small" ForeColor="Red" Display="None"></asp:RequiredFieldValidator>
                     </td>
 
                 </tr>
@@ -219,7 +225,7 @@
                 </li>
             </ul>
 
-            <asp:ValidationSummary ID="ValidationSummary1" runat="server" Font-Italic="True" Font-Size="Larger" ForeColor="Red" HeaderText="The following errors occured:" Height="55px" Width="431px" DisplayMode="List" />
+           
         </div>
 
     </form>
