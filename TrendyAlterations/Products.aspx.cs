@@ -13,6 +13,8 @@ namespace TrendyAlterations
     {
         protected void Page_Load(object sender, EventArgs e)
         {
+            if (!IsPostBack)
+            {
                 DataTable dt = new DataTable();
                 DataRow dr;
                 dt.Columns.Add("imageURL");
@@ -28,7 +30,7 @@ namespace TrendyAlterations
                         dr = dt.NewRow();
                         String mycon = "Data Source=KMC-HP2019;Initial Catalog=TrendyAlteration_DB;Integrated Security=True";
                         SqlConnection scon = new SqlConnection(mycon);
-                        String myquery = "select * from Product where productID='" + Request.QueryString["id"]+"'";
+                        String myquery = "select * from Product where productID='" + Request.QueryString["id"] + "'";
                         SqlCommand cmd = new SqlCommand();
                         cmd.CommandText = myquery;
                         cmd.Connection = scon;
@@ -44,8 +46,7 @@ namespace TrendyAlterations
                         GridView1.DataSource = dt;
                         GridView1.DataBind();
                         Session["buyitems"] = dt;
-                        dt.Clear();
-                }
+                    }
                     else
                     {
                         dt.Clear();
@@ -71,14 +72,15 @@ namespace TrendyAlterations
                         GridView1.DataSource = dt;
                         GridView1.DataBind();
                         Session["buyitems"] = dt;
-                    }                
-            }
+                    }
+                }
                 else
                 {
-                dt = (DataTable)Session["buyitems"];
-                GridView1.DataSource = dt;
-                GridView1.DataBind();
+                    dt = (DataTable)Session["buyitems"];
+                    GridView1.DataSource = dt;
+                    GridView1.DataBind();
 
+                }
             }
 
 
