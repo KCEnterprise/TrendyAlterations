@@ -33,7 +33,7 @@ namespace TrendyAlterations
                     {
                         HyplHidden1.Text = "Manage Product";
                         HyplHidden1.Visible = true;
-                        HyplHidden1.NavigateUrl = "";
+                        HyplHidden1.NavigateUrl = "~/AdminProducts.aspx";
 
                         HyplHidden2.Text = "Manage User";
                         HyplHidden2.Visible = true;

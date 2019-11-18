@@ -1,7 +1,26 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site1.Master" AutoEventWireup="true" CodeBehind="addProduct.aspx.cs" Inherits="TrendyAlterations.WebForm2" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site1.Master" AutoEventWireup="true" CodeBehind="AdminProducts.aspx.cs" Inherits="TrendyAlterations.WebForm2" %>
 
 
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
+    
+    <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" DataKeyNames="productID" DataSourceID="ProductsDataSource">
+                                <Columns>
+                                    <asp:BoundField DataField="productID" HeaderText="Product ID" ReadOnly="True" SortExpression="productID" />
+                                    <asp:BoundField DataField="productName" HeaderText="Product Name" SortExpression="productName" />
+                                    <asp:BoundField DataField="productDesc" HeaderText="Product Description" SortExpression="productDesc" />
+                                    <asp:BoundField DataField="unitPrice" HeaderText="Price" SortExpression="unitPrice" />
+                                    <asp:BoundField DataField="imageURL" HeaderText="Image URL" SortExpression="imageURL" />
+                                    <asp:CommandField ButtonType="Button" ShowEditButton="True" />
+                                    <asp:CommandField ButtonType="Button" ShowDeleteButton="True" ShowHeader="True" />
+                                </Columns>
+                            </asp:GridView>
+
+
+    <asp:SqlDataSource ID="ProductsDataSource" runat="server" ConnectionString="<%$ ConnectionStrings:TrendyAlteration_DBConnectionString %>" SelectCommand="SELECT * FROM [Product]" DeleteCommand=
+        "DELETE FROM [Product] WHERE [productID] = @productID"> </asp:SqlDataSource>
+
+
+    <%--Add data to database--%>
     <table class="table table-striped">
   <thead>
   </thead>

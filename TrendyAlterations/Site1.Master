@@ -47,7 +47,7 @@
                     <a class="nav-link" id="order_history-tab" data-toggle="tab" href="Contact.aspx" role="tab" aria-controls="settings" aria-selected="false" hidden="hidden">Order History</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" id="messages-tab" data-toggle="tab" href="Packages.aspx" role="tab" aria-controls="messages" aria-selected="false">Packages</a>
+                    <a class="nav-link" id="messages-tab" data-toggle="tab" href="Products.aspx" role="tab" aria-controls="messages" aria-selected="false">Packages</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" id="settings-tab" data-toggle="tab" href="Contact.aspx" role="tab" aria-controls="settings" aria-selected="false">Contact Us</a>

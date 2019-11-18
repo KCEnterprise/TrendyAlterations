@@ -206,7 +206,7 @@
     <Content Include="Scripts\umd\popper.min.js" />
     <Content Include="Login.aspx" />
     <Content Include="Products.aspx" />
-    <Content Include="addProduct.aspx" />
+    <Content Include="AdminProducts.aspx" />
     <Content Include="Welcomepage.aspx" />
     <Content Include="Web.config" />
   </ItemGroup>
@@ -269,12 +269,12 @@
     <Compile Include="Products.aspx.designer.cs">
       <DependentUpon>Products.aspx</DependentUpon>
     </Compile>
-    <Compile Include="addProduct.aspx.cs">
-      <DependentUpon>addProduct.aspx</DependentUpon>
+    <Compile Include="AdminProducts.aspx.cs">
+      <DependentUpon>AdminProducts.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="addProduct.aspx.designer.cs">
-      <DependentUpon>addProduct.aspx</DependentUpon>
+    <Compile Include="AdminProducts.aspx.designer.cs">
+      <DependentUpon>AdminProducts.aspx</DependentUpon>
     </Compile>
     <Compile Include="Welcomepage.aspx.cs">
       <DependentUpon>Welcomepage.aspx</DependentUpon>
