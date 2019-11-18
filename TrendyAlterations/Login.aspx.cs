@@ -16,14 +16,7 @@ namespace TrendyAlterations
         {
             if (!IsPostBack)
             {
-            //    if (User.Identity.IsAuthenticated)
-            //    {
-            //        Response.Redirect("Welcomepage.aspx");
-            //    }
-            //    else
-            //    {
-            //        //something
-            //    }
+            
             }
            
         }

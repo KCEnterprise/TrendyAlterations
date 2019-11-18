@@ -38,24 +38,28 @@
        <nav class="nav flex-column">
             <ul class="list-inline d-flex justify-content-center" id="myTab" role="tablist">
                 <li class="nav-item">
-                    <a class="nav-link " id="home-tab" data-toggle="tab" href="homepage.aspx" role="tab" aria-controls="home" aria-selected="false">Home</a>
+                   <asp:HyperLink ID="HyplHome" runat="server" CssClass="nav-link">Home</asp:HyperLink>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" id="profile-tab" data-toggle="tab" href="About.aspx" role="tab" aria-controls="profile" aria-selected="false">About</a>
+                    <asp:HyperLink ID="HyplAbout" runat="server" NavigateUrl="~/About.aspx"  CssClass="nav-link">About</asp:HyperLink>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" id="order_history-tab" data-toggle="tab" href="Contact.aspx" role="tab" aria-controls="settings" aria-selected="false" hidden="hidden">Order History</a>
+                    <asp:HyperLink ID="HyplPackages" runat="server" NavigateUrl="~/Packages.aspx"  CssClass="nav-link">Packages</asp:HyperLink>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" id="messages-tab" data-toggle="tab" href="Products.aspx" role="tab" aria-controls="messages" aria-selected="false">Packages</a>
+                    <asp:HyperLink ID="HyplContact" runat="server" NavigateUrl="~/Contact.aspx"  CssClass="nav-link">Contact Us</asp:HyperLink>
+                </li>
+                 <li class="nav-item">
+                    <asp:HyperLink ID="HyplHidden1" runat="server"  Visible="False"  CssClass="nav-link"></asp:HyperLink>
+                </li>
+                 <li class="nav-item">
+                     <asp:HyperLink ID="HyplHidden2" runat="server"  Visible="False"  CssClass="nav-link"></asp:HyperLink>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" id="settings-tab" data-toggle="tab" href="Contact.aspx" role="tab" aria-controls="settings" aria-selected="false">Contact Us</a>
+                     <asp:Button ID="btnLogOut" runat="server" Text="Log Out" OnClick="SignOut" Visible="False" />
                 </li>
             </ul>
        </nav>
-
-
 
         <!-- Tab panes -->
         <div class="tab-content">

@@ -207,8 +207,8 @@
     <Content Include="Login.aspx" />
     <Content Include="Products.aspx" />
     <Content Include="AdminProducts.aspx" />
-    <Content Include="Welcomepage.aspx" />
     <Content Include="Web.config" />
+    <Content Include="Welcomepage.aspx" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="About.aspx.cs">
