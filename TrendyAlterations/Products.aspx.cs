@@ -13,8 +13,6 @@ namespace TrendyAlterations
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            
-            
                 DataTable dt = new DataTable();
                 DataRow dr;
                 dt.Columns.Add("imageURL");
@@ -27,7 +25,6 @@ namespace TrendyAlterations
                 {
                     if (Session["Buyitems"] == null)
                     {
-
                         dr = dt.NewRow();
                         String mycon = "Data Source=KMC-HP2019;Initial Catalog=TrendyAlteration_DB;Integrated Security=True";
                         SqlConnection scon = new SqlConnection(mycon);
@@ -47,18 +44,18 @@ namespace TrendyAlterations
                         GridView1.DataSource = dt;
                         GridView1.DataBind();
                         Session["buyitems"] = dt;
-                    }
+                        dt.Clear();
+                }
                     else
                     {
-
+                        dt.Clear();
                         dt = (DataTable)Session["buyitems"];
                         int sr;
                         sr = dt.Rows.Count;
-
                         dr = dt.NewRow();
                         String mycon = "Data Source=KMC-HP2019;Initial Catalog=TrendyAlteration_DB;Integrated Security=True";
                         SqlConnection scon = new SqlConnection(mycon);
-                        String myquery = "select * from Product where productID=" + Request.QueryString["id"];
+                        String myquery = "select * from Product where productID='" + Request.QueryString["id"] + "'";
                         SqlCommand cmd = new SqlCommand();
                         cmd.CommandText = myquery;
                         cmd.Connection = scon;
@@ -74,30 +71,26 @@ namespace TrendyAlterations
                         GridView1.DataSource = dt;
                         GridView1.DataBind();
                         Session["buyitems"] = dt;
-
-                    }
-                }
+                    }                
+            }
                 else
                 {
-                    dt = (DataTable)Session["buyitems"];
-                    GridView1.DataSource = dt;
-                    GridView1.DataBind();
+                dt = (DataTable)Session["buyitems"];
+                GridView1.DataSource = dt;
+                GridView1.DataBind();
 
-                }
+            }
 
-            
+
 
 
         }
-
-
 
         protected void DataList1_ItemCommand(object source, DataListCommandEventArgs e)
         {
             if (e.CommandName == "AddtoCart")
             {
                 Response.Redirect("Products.aspx?id=" + e.CommandArgument.ToString());
-
             }
 
         }

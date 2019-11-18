@@ -11,7 +11,6 @@
                         <div class="row p-2 justify-content-center">
                             <div class="col-sm">
                                 <asp:DataList ID="DataList1" runat="server" DataKeyField="productID" DataSourceID="SqlDataSource1" RepeatColumns="2" RepeatDirection="Horizontal" CellSpacing="-1" BorderStyle="None" ShowFooter="False" ShowHeader="False" OnItemCommand="DataList1_ItemCommand">
-                                    <FooterStyle />
                                     <HeaderStyle></HeaderStyle>
                                     <ItemStyle />
                                     <ItemTemplate>
@@ -64,7 +63,7 @@
                             </div>
                             <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False">
                                 <Columns>
-                                    <asp:ImageField DataImageUrlField="imageURL" HeaderText="Item">
+                                    <asp:ImageField DataImageUrlField="imageURL" HeaderText="Item" ControlStyle-Height="200px" ControlStyle-Width="400px">
                                     </asp:ImageField>
                                     <asp:BoundField DataField="productName" HeaderText="Name" />
                                     <asp:BoundField DataField="unitPrice" HeaderText="Price" />
