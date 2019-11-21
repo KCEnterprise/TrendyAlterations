@@ -51,10 +51,13 @@
                 <a class="nav-link" id="profile-tab" data-toggle="tab" href="About.aspx" role="tab" aria-controls="profile" aria-selected="false">About</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" id="messages-tab" data-toggle="tab" href="Packages.aspx" role="tab" aria-controls="messages" aria-selected="false">Packages</a>
+                <a class="nav-link" id="messages-tab" data-toggle="tab" href="Products.aspx" role="tab" aria-controls="messages" aria-selected="false">Packages</a>
             </li>
             <li class="nav-item">
                 <a class="nav-link" id="settings-tab" data-toggle="tab" href="Contact.aspx" role="tab" aria-controls="settings" aria-selected="false">Contact Us</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" id="login-tab" data-toggle="tab" href="Login.aspx" role="tab" aria-controls="settings" aria-selected="false">Log In</a>
             </li>
         </ul>
 

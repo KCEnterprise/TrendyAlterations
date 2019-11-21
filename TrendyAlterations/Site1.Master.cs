@@ -24,7 +24,7 @@ namespace TrendyAlterations
 
                     HyplHidden2.Text = "View Shopping Cart";
                     HyplHidden2.Visible = true;
-                    HyplHidden2.NavigateUrl = "";
+                    HyplHidden2.NavigateUrl = "~/ShoppingCart.aspx";
                     btnLogOut.Visible = true;
 
                     HyplHome.NavigateUrl = "~/Welcomepage.aspx";
@@ -32,7 +32,7 @@ namespace TrendyAlterations
 
                 if (Page.User.IsInRole("Admin"))
                 {
-                    HyplHidden1.Text = "Manage Product";
+                    HyplHidden1.Text = "Manage Products";
                     HyplHidden1.Visible = true;
                     HyplHidden1.NavigateUrl = "~/AdminProducts.aspx";
 

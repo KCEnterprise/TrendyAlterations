@@ -182,10 +182,11 @@
                         <asp:Label ID="labPassword" runat="server" Text="Password"></asp:Label>
                     </td>
                     <td class="auto-style12">
-                        <asp:TextBox ID="txtPassword" runat="server" TextMode="Password" Height="54px" Width="367px" placeholder="Must have special characters, numbers and upper/lower case letters" onkeyup="checkPasswordStrength()" ></asp:TextBox>
+                        <asp:TextBox ID="txtPassword" runat="server" TextMode="Password" Height="54px" Width="367px" placeholder="Must be 8 characters and have both letters and numbers." onkeyup="checkPasswordStrength()" ></asp:TextBox>
                         <asp:Label ID="lblMessage" runat="server" Font-Size="Smaller"></asp:Label>
                         
                         <br />
+                        <asp:RegularExpressionValidator ID="RegularExpressionValidatorPassword" runat="server" ErrorMessage="Password must be 8 characters and have both letters and numbers." ControlToValidate="txtPassword" ValidationExpression="^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[$@$!%*?&])[A-Za-z\d$@$!%*?&]{8,}"></asp:RegularExpressionValidator>
                         <asp:RequiredFieldValidator ID="requiredPassword" runat="server" ControlToValidate="txtPassword" ErrorMessage="Password Required" Font-Bold="True" Font-Size="Small" ForeColor="Red" Display="None"></asp:RequiredFieldValidator>
                     </td>
 

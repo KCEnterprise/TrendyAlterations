@@ -44,7 +44,9 @@ namespace TrendyAlterations
                 if (IsValid)
                 { //if registration is valid
                     Session["User"] = txtUsername.Text;
-                    Response.Redirect("Welcomepage.aspx");
+                    var RegistrationauthenticationManager = HttpContext.Current.GetOwinContext().Authentication; //logs out the user after successful registration.
+                    RegistrationauthenticationManager.SignOut();
+                    Response.Redirect("homepage.aspx");
                 }
             }
 

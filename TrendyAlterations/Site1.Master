@@ -44,7 +44,7 @@
                     <asp:HyperLink ID="HyplAbout" runat="server" NavigateUrl="~/About.aspx"  CssClass="nav-link">About</asp:HyperLink>
                 </li>
                 <li class="nav-item">
-                    <asp:HyperLink ID="HyplPackages" runat="server" NavigateUrl="~/Packages.aspx"  CssClass="nav-link">Packages</asp:HyperLink>
+                    <asp:HyperLink ID="HyplPackages" runat="server" NavigateUrl="~/Products.aspx"  CssClass="nav-link">Packages</asp:HyperLink>
                 </li>
                 <li class="nav-item">
                     <asp:HyperLink ID="HyplContact" runat="server" NavigateUrl="~/Contact.aspx"  CssClass="nav-link">Contact Us</asp:HyperLink>

@@ -11,7 +11,7 @@ namespace TrendyAlterations
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-
+            lblName.Text = Session["User"].ToString();
         }
     }
 }

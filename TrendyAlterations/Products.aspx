@@ -51,7 +51,7 @@
                   </div>
               </div>
 
-              <div class="col-md-5 ">
+             <%-- <div class="col-md-5 ">
                   <div class="p-3  bg-light">                 
                         <h2 style="text-align: center;">Shopping Cart</h2>
                    
@@ -63,7 +63,7 @@
                             </div>
                             <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False">
                                 <Columns>
-                                    <asp:ImageField DataImageUrlField="imageURL" HeaderText="Item" ControlStyle-Height="200px" ControlStyle-Width="400px">
+                                    <asp:ImageField DataImageUrlField="imageURL" HeaderText="Item" ControlStyle-Height="100px" ControlStyle-Width="200px">
                                     </asp:ImageField>
                                     <asp:BoundField DataField="productName" HeaderText="Name" />
                                     <asp:BoundField DataField="unitPrice" HeaderText="Price" />
@@ -82,9 +82,8 @@
                         </div>
                         <button class="btn btn-primary btn-purchase" type="button">PURCHASE</button> 
                   </div>
-              </div>
+              </div>--%>
         </div> 
          
-            <asp:HyperLink ID="hyp_addProduct" runat="server" NavigateUrl="~/addProduct.aspx" Text="Add New Product" CssClass="align-right"></asp:HyperLink>
     </div>
 </asp:Content>

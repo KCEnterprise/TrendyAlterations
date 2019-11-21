@@ -12,13 +12,21 @@
                                     <asp:BoundField DataField="imageURL" HeaderText="Image URL" SortExpression="imageURL" />
                                     <asp:CommandField ButtonType="Button" ShowEditButton="True" />
                                     <asp:CommandField ButtonType="Button" ShowDeleteButton="True" ShowHeader="True" />
+                                    <asp:CommandField ButtonType="Button" ShowCancelButton="true" ShowHeader="True" />
                                 </Columns>
                             </asp:GridView>
 
 
-    <asp:SqlDataSource ID="ProductsDataSource" runat="server" ConnectionString="<%$ ConnectionStrings:TrendyAlteration_DBConnectionString %>" SelectCommand="SELECT * FROM [Product]" DeleteCommand=
-        "DELETE FROM [Product] WHERE [productID] = @productID"> </asp:SqlDataSource>
-
+    <asp:SqlDataSource ID="ProductsDataSource" runat="server" ConnectionString="<%$ ConnectionStrings:TrendyAlteration_DBConnectionString %>" SelectCommand="SELECT * FROM [Product]" 
+        DeleteCommand="DELETE FROM [Product] WHERE [productID] = @productID" UpdateCommand="Update Product SET  productName = @productName, productDesc = @productDesc,
+               unitPrice = @unitPrice, imageURL = @imageURL WHERE productID = @productID">  </asp:SqlDataSource>
+     <UpdateParameters>
+                            <asp:Parameter Name="productID" Type="Varchar" />
+                            <asp:Parameter Name="productName" Type="Varchar" />
+                            <asp:Parameter Name="productDesc" Type="Varchar" />
+                            <asp:Parameter Name="unitPrice" Type="Money" />
+                            <asp:Parameter Name="imageURL" Type="Varchar" />
+               </UpdateParameters>
 
     <%--Add data to database--%>
     <table class="table table-striped">
